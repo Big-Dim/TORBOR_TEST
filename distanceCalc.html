@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Расcтояние между городами</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=bb1bc96e-d73a-4887-8630-fe90565f0629" type="text/javascript"></script>
+    <script src="js/distanceCalc.js" type="text/javascript"></script>
+
+	<style>
+
+  </style>
+	</head>
+<body>
+<div data-role="header">
+    <h1>Расчет растояния</h1>
+</div>
+<div role="main" class="ui-content" id="my_view" >
+    <input role="button"  value="Добавить" id="Calc" type="button" @click="add">
+   
+	
+
+<div class="ui-grid-b ui-responsive my-breakpoint">
+  <ielem  :pos="1"></ielem>
+  <ielem  v-for="n in values" :pos="n"></ielem>
+</div>
+<div class="ui-grid-solo ui-responsive">
+  <div class="ui-block-a"><span  id="mess_txt"><br/></span></div>
+</div>
+
+	
+	<div id="map"></div>
+</div>	
+</body>
+</html>
